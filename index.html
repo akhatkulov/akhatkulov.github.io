@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akhatkulov</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 </head>
 <body>
     <!-- header -->
@@ -24,8 +25,31 @@
     
     <!-- Home section -->
     <section id="home">
-        This is home.
-        
+        <div class="home_1">
+        <h3 class="home_text">Hello, It's me</h3>
+            <h1 class="home_text">Mekhroj Akhatkulov</h1>
+            <h3 class="home_text">And I'm a <span class="pro-text">
+                <script>
+                   var typed = new Typed(".pro-text", {
+                      strings: [
+                        "Ethical Hacker",
+                        "Full-Stack Programmer",
+                        "Linux Administrator",
+                        "Compititive Programmer",
+                        "Typer"
+                      ],
+                      typeSpeed: 50,   
+                      backSpeed: 20,   
+                      backDelay: 1000,  
+                      loop: true        
+                    });
+                </script>
+            </span></h3>
+        </div>
+
+        <div class="home_2">
+            <img class="ams_image" src="./photos/ams.jpg" alt="Error in Img">
+        </div>
     </section>
 
     <!-- About section -->
