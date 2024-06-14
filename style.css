@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
+body {
+    font-family: sans-serif;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
 
 .header{
     border-bottom: 3px solid black;
@@ -58,12 +67,18 @@
 
 .home_1{
     display: inline-block;
+    width: 40%;
     margin-top: 40px;
     margin-left: 70px;
+    text-align: left;
+    vertical-align: middle;
 }
 .home_2{
     margin-top: 40px;
     margin-right: 70px;
+    vertical-align: middle;
+    text-align: right;
+    width: 30%;
     display: inline-block;
 }
 /* .home_text{
@@ -72,5 +87,5 @@
 
 .ams_image{
     display: inline-block;
-    width:200px
+    width:400px;
 }
