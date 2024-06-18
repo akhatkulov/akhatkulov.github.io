@@ -1,91 +1,314 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@100..900&display=swap');
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
 
 body {
     font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    height: 100vh;
 }
 
 .container {
-    width: 1140px;
+    width: 100%;
+    max-width: 1140px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
-
-.header{
-    border-bottom: 3px solid black;
+.header {
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    justify-content: center;
+    position: fixed;
+    background-color: white;
+    box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
 }
 
-.nav-element{
+.nav-element {
     display: inline-block;
 }
-.navigation{
+
+.navigation {
     display: inline-block;
 }
-.nav-element a{
+
+.nav-element a {
     text-decoration: none;
     color: black;
     display: inline-block;
-    font-size: large;
-    text-align: right;
-    vertical-align:middle;
-    padding: 5px;
-    margin: 10px;
-    border: 1px none;
+    padding: 5px 10px;
+    margin: 0 5px;
     font-family: "Oswald", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400px;
-    font-style: normal;
+    font-weight: 400;
+    border-radius: 5%;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
-.nav-element a:hover{
+.nav-element a:hover {
     color: aliceblue;
     background-color: black;
-    border: 1px solid gray;
-    border-radius: 5%;
-    padding: 5px;
-    margin: 10px;
+    border-color: gray;
 }
-.nav-element a:active{
+.clearfix {
+    clear: both;
+}
+.nav-element a:active {
     color: aliceblue;
-    text-decoration:underline;
+    text-decoration: underline;
     border: 1px solid gray;
     border-radius: 5%;
-    padding: 5px;
-    margin: 10px;
 }
-.header .header-title{
+
+.header-title,.slider-title {
     display: inline-block;
-    text-align: left;
     font-size: 30px;
-    margin: 10px;
-
+    margin: 0 20px;
     font-family: "Oswald", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 30px;
-    font-style: normal;
+    font-weight: 700;
 }
 
-
-.home_1{
+.home_1,.home_2 {
     display: inline-block;
-    width: 40%;
     margin-top: 40px;
+    vertical-align: middle;
+}
+
+.home_1 {
+    width: 40%;
     margin-left: 70px;
     text-align: left;
-    vertical-align: middle;
 }
-.home_2{
-    margin-top: 40px;
-    margin-right: 70px;
-    vertical-align: middle;
-    text-align: right;
-    width: 30%;
-    display: inline-block;
-}
-/* .home_text{
-    display: inline-block;
-} */
 
-.ams_image{
+.home_2 {
+    width: 30%;
+    margin-right: 70px;
+    text-align: right;
+}
+
+.ams_image {
     display: inline-block;
-    width:400px;
+    width: 600px;
+}
+
+.personal_image {
+    width: 100%;
+    border: 2px solid black;
+    border-width: 3px 4px 3px 5px;
+    border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+    transform: rotate(2deg);
+}
+
+.person_info .person-jobs {
+    display: inline-block;
+}
+
+.about_1,.about_2 {
+    display: inline-block;
+    margin-top: 40px;
+    vertical-align: middle;
+}
+
+.about_1 {
+    width: 50%;
+}
+
+.about_2 {
+    width: 40%;
+    margin-right: 70px;
+    text-align: left;
+}
+
+.person_info {
+    font-size: large;
+}
+
+.person_skills {
+    margin-left: 10px;
+    margin-bottom: 30px;
+    text-align: start;
+}
+
+.contact-form {
+    background-color: #fff;
+    color: #000;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+}
+
+.btn-custom {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #fff;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.btn-custom:hover {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000;
+}
+
+.sm-title {
+    text-align: center;
+    border-bottom: 2px solid black;
+    padding-bottom: 20px;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+}
+
+.socical-network {
+    width: 100%;
+}
+
+.sm-container {
+    width: 40%;
+    display: inline-block;
+    justify-content: flex-start;
+    vertical-align: top;
+}
+
+.sm-element {
+    justify-content: flex-start;
+    vertical-align: top;
+}
+
+.sm-icon {
+    margin: 5%;
+    width: 70px;
+    display: inline-block;
+}
+
+.sm-name {
+    text-decoration: none;
+    font-size: 30px;
+    display: inline-block;
+    color: #000;
+    padding: 4px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.sm-name:hover {
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 4px;
+}
+
+
+
+/* 
+------------------------------------------------------------------- */
+.navs-element{
+    display: inline-block;
+    text-decoration:none;
+    font-size: 50px;
+    color: black;
+    margin: 10px;
+    font-family: "Oswald", sans-serif;
+    border-radius: 3px;
+}
+.cli-1{
+    width: 30%;
+}
+.cli-element> {
+    width: 100%;
+    display: inline-block;
+
+}
+.slider {
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.slides::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.slides::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+}
+
+.slides::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.slides > div {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 100%;
+    border-radius: 10px;
+    background: #eee;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider > a {
+    display: inline-flex;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: white;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 0 0.5rem 0;
+    position: relative;
+}
+
+.slider > a:active {
+    top: 1px;
+}
+
+.slider > a:focus {
+    background: #000;
+}
+
+/* Hide navigation buttons if scroll-snap-type is supported */
+@supports (scroll-snap-type){
+    .slider > a {
+        display: none;
+    }
 }
