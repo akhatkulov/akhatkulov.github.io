@@ -221,16 +221,36 @@ section {
 
 
 .top-div {
-    display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    text-align: center;
+    display: inline-block;
     margin-bottom: 10px;
 }
+.pj-menu-title{
+    font-size: 30px;
+    color: black !important;
+    background-color: white !important;
+    border: none !important;
+
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+}
+
+.top-div div:hover{
+    border-bottom: 4px solid gray;
+}
+
 .top-div div {
+    border: 1px solid black;
+    margin: 3px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: inline-block;
     padding: 10px;
-    color: #000;
+    color: white;
+    background-color: #000;
     cursor: pointer;
-    border: 1px solid #000;
-    border-radius: 5px;
+    border-radius: 5%;
 }
 
 .off-on > div {
