@@ -27,6 +27,11 @@ section {
     padding: 0 1rem;
 }
 
+
+.variant-2{
+    display: none;
+}
+
 .header {
     z-index: 1;
     top: 0;
@@ -330,31 +335,45 @@ section {
     .sm-name{
         font-size: 1.3rem;
     }
+    .variant-2{
+        display: none;
+    }
 }
 
 
 @media only screen and (max-width: 768px){
-    .p1{
-        width: 40%;
+    .container{
+        max-width: 96%;
+        border-bottom: 1rem;
     }
-    .p2{
-        width: 40%;
+    .cv-1{
+        color:black;
+        background-color: white;
     }
-    .p3{
+    .cv-2{
+        color:#fff;
+        background-color: black;
+    }
+    .variant-1{
+        display: none;
+    }
+    .variant-2{
         width: 100%;
+        margin-top: 5rem;
+        margin: 1rem;
+        display: inline-block;
     }
-    .top-div > *{
-        font-size: 0.3rem;
+    .pj2-info{
+        border-radius: 8%;
+        padding: 15px;
+        float: left;
+        border: 2px solid black;
+        width: 45%;
+        margin: 1.66%;
     }
-    .pj-menu-title, #button{
-        font-size: 1.1rem;
-    }
-    .p-title{
-        font-size: 0.7rem;
-        font-style: bold;
-    }
-    .pj-part{
-        margin: 0.1rem;
+    .pj2-title{
+        text-align: center;
+        font-size: 2rem;
     }
     .person_info {
         font-size: 1.7rem;
@@ -424,10 +443,7 @@ section {
         margin-top: 2rem;
         display: inline-block;
     }
-    .container{
-        max-width: 96%;
-        border-bottom: 2rem;
-    }
+
     .header-title,.slider-title {
         font-size: 1.7rem;
         margin: 0 1rem;
@@ -440,35 +456,38 @@ section {
     .about_2{
         margin-right: 4rem;
     }
-    .top-div > *{
-        font-size: 1rem;
-    }
-    .pj-menu-title{
-        font-size: 2rem;
-    }
-    .p-title{
-        font-size: 1.2rem;
-        font-style: bold;
-    }
-    .pj-part{
-        margin: 0.2rem;
-    }
+
     .sm-icon{
-        width: 60px;
+        width: 55px;
     }
     .sm-name{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     .ams_icon{
         display: none;
     }
 }
 
-
+/* 600 */
 @media only screen and (max-width:600px){
+    .variant-1{
+        display: none;
+    }
+    .pj2-info{
+        border-radius: 8%;
+        padding: 10px;
+        float: left;
+        border: 2px solid black;
+        width: 45%;
+        margin: 0.5rem;
+    }
+    .pj2-title{
+        text-align: center;
+        font-size: 1.5rem;
+    }
     .container{
-        margin-bottom: 2rem;
-        max-width: 20rem;
+        margin-bottom: 1.7rem;
+        max-width: 96%;
     }
     .home_1 {
         margin-top:5rem;
@@ -513,23 +532,49 @@ section {
     .about_2{
         margin-right: 4rem;
     }
-    .top-div > *{
-        font-size: 1rem;
-    }
-    .pj-menu-title{
-        font-size: 2rem;
-    }
-    .p-title{
-        font-size: 1.2rem;
-        font-style: bold;
-    }
-    .pj-part{
-        margin: 0.2rem;
-    }
     .sm-icon{
-        width: 60px;
+        width: 50px;
     }
     .sm-name{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width:545px){
+    .sm-name{
+        font-size: 1.1rem;
+        padding: 0.1rem;
+    }
+    .sm-name:hover{
+        font-size: 1.1rem;
+        padding: 0.1rem;
+    }
+    .sm-icon{
+        width: 50px;
+        padding: 0.1rem;
+        margin: 3%;
+    }
+}
+
+@media only screen and (max-width:478px){
+    .sm-icon{
+        display: inline-block;
+    }
+    .sm-name{
+        font-size: 2rem;
+        display: inline-block;
+    }
+    .sm-name:hover{
+        font-size: 3rem;
+        display: inline-block;
+    }
+    .sm-element{
+        display: inline-block;
+    }
+    .sm-container{
+        display: block;
+    }
+    .socials {
+        display: block;
     }
 }
