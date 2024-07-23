@@ -45,6 +45,11 @@ section {
     align-items: center;
     padding: 0.8rem 0;
 }
+.navigation ul {
+    display: flex;
+    align-items: center   ;
+    margin-top: 20px;
+}
 
 .nav-element,.navigation{
     display: inline-block;
@@ -54,9 +59,11 @@ a{
     text-decoration: none;
 }
 .nav-element a {
+    text-align: center;
     text-decoration: none;
     color: black;
-    display: inline-block;
+
+    display: flex;
     padding: 0.3rem 0.8rem;
     margin: 0 0.3rem;
     font-family: "Oswald", sans-serif;
