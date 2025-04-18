@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Admin Panel</h1>
+    <a href="/logout">Chiqish</a>
+
+    <h2>Loyiha qo‘shish</h2>
+    <form method="POST" action="/add_project" enctype="multipart/form-data">
+        <input type="text" name="title" placeholder="Sarlavha"><br>
+        <textarea name="description" placeholder="Tavsif"></textarea><br>
+        <input type="text" name="link" placeholder="Havola"><br>
+        <input type="file" name="image"><br>
+        <button type="submit">Qo‘shish</button>
+    </form>
+
+    <h2>Buyurtma qo‘shish</h2>
+    <form method="POST" action="/add_order">
+        <input type="text" name="title" placeholder="Buyurtma nomi"><br>
+        <textarea name="about" placeholder="Izoh / tafsilotlar"></textarea><br>
+        <input type="text" name="link" placeholder="Havola"><br>
+        <input type="text" name="feedback_link" placeholder="Feedback havolasi"><br>
+        <button type="submit">Qo‘shish</button>
+    </form>
+</body>
+</html>
