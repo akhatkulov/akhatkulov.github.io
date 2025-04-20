@@ -20,6 +20,11 @@ db = SQLAlchemy(app)
 login_manager = LoginManager(app)
 login_manager.login_view = 'admin_login'
 
+def send_message(name,mail,text):
+    from telebot import TeleBot
+    bot = TeleBot(token=os.getenv("BOT_TOKEN"))
+    bot.send_message(chat_id=os.getenv("ADMIN_ID"),text=f"<b>Saytdan yangi xabar yo'llandi!!!</b>\n\nIsmi:{name}\nEmail:{mail}\nMatn:{text}",parse_mode="HTML")
+
 # Project model
 class Project(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -93,6 +98,7 @@ def receive_message():
     name = data.get('name')
     email = data.get('email')
     message = data.get('message')
+    send_message(name,email,message)
     print(f"Xabar qabul qilindi: {name} | {email} | {message}")
     return jsonify({'status': 'success'}), 200
 
