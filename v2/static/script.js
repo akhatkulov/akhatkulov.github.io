@@ -38,6 +38,8 @@
             });
           })
           .catch(error => {
+            console.log(error);
+            
             alertBox.style.display = 'block';
             alertBox.className = 'alert alert-danger';
             alertBox.innerText = 'Xatolik yuz berdi. Qayta urinib ko‘ring.';

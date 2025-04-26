@@ -31,7 +31,7 @@
         <meta name="twitter:image" content="https://www.Akhatkulov.uz/images/cover.png">
       
         <!-- Favicon -->
-        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
       
         <!-- Canonical URL -->
         <link rel="canonical" href="https://www.Akhatkulov.uz/" />
@@ -46,7 +46,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css">
       
         <!-- Custom Stylesheet -->
-        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
       
         <!-- Robots.txt Instructions (Optional) -->
         <meta name="robots" content="index, follow">
@@ -58,7 +58,11 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-white sticky-top">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#">Akhatkulov</a>
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+        Akhatkulov  |
+        <img src="{{ url_for('static', filename='favicon.ico') }}" alt="logo" style="height: 2em; filter: brightness(0) invert(1); margin-left: 8px;">
+      </a>
+      
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -251,7 +255,7 @@
   <!-- Contact -->
   <section id="contact" class="container py-5">
     <h2 class="border-bottom pb-2">Aloqa</h2>
-    <form onsubmit="submitForm(event)">
+    <form onsubmit="submitForm(event)" id="contact-form">
       <div class="mb-3">
         <label for="name" class="form-label">Ismingiz</label>
         <input type="text" class="form-control bg-dark text-white border-white" id="name" required>
