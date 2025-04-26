@@ -75,11 +75,6 @@ header h1 {
     font-size: 1.2rem;
 }
 
-.card-body p {
-    font-size: 0.95rem;
-    color: #555;
-}
-
 .links {
     display: flex;
     gap: 10px;
